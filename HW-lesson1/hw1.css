@@ -1,0 +1,40 @@
+
+body {
+    font-family: sans-serif;
+}
+section {
+    display: grid;
+    gap: 1.5 rem; 
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+ 
+}
+
+section h1 {
+    grid-column: 1/4;
+    text-align: center;
+}
+
+
+img {
+    max-width: 50%;
+    object-fit: cover;
+    border-radius: 20%;
+    
+}
+
+p {
+    display:block;
+    text-align: center;
+}
+
+.card a {
+    display: block;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 3px 4px;
+    padding: .10rem, .5rem; 
+    margin: 20px;
+}

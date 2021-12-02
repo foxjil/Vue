@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HW.VUE</title>
+    <link rel="stylesheet" href="hw1.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <section id="app">
+            <div class="card" v-for ="cat in cats">
+                <h1>Имя: {{cat.name}}</h1>
+                <p>Возраст: {{cat.age}}</p>
+                <p>Цвет: {{cat.color}}</p>
+                <img v-bind:src="cat.img">
+                <a href="#">Подробнее</a>
+            </div>
+    </section>
+
+<script src="js\hw1.js"></script>
+</body>
+</html>
