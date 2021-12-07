@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HW.VUE</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <section id="app">
+        <label >
+            Введите название статьи:
+            <input type="text" v-model="input">
+        </label>
+        <div v-for="article in matchArticles"
+             class="list-items">
+            <img :src="article.image" alt="Изображение к статье">
+            <p>{{ article.title.toUpperCase() }}</p>
+        </div>
+    </section>
+
+<script src="js\hw3.1.js"></script>
+</body>
+</html>

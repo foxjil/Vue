@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HW.VUE</title>
+    <link rel="stylesheet" href="hw2.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<section id="app" class="container">
+    <p>Сортировка</p>
+    <span v-for="title in tabsTitles" v-on:click="currentTabTitle = title">
+        {{ title }}
+    </span>
+    <span v-for="good in getsortedGoods()":class="card">
+        <h2>{{ good.title }}</h2>
+        <p>{{ good.price }}</p>
+
+    </span>
+</section>
+
+<script src="js\hw2.js"></script>
+</body>
+</html>

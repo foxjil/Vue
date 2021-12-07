@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HW.VUE</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <section id="app">
+    <table>
+        <thead>
+            <tr>
+                <th>Услуга</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tr v-for="(service, index) in services">
+            <td>{{ service.title }}</td>
+            <td>{{ service.price }}</td>
+        </tr>
+    </table>
+    <div>
+        <label for="services">Выберите услуги: </label>
+        <select id="services" name="service" multiple v-model="selectedServices">
+            <option :value="i" v-for="(service, i) in services">
+                {{ service.title }}
+            </option>
+        </select>
+    </div>
+    <p>Cтоимость услуг:</p>
+    <p>{{ finalPrice }}</p>
+</section>
+
+<script src="js\hw3.2.js"></script>
+</body>
+</html>
